@@ -1,6 +1,6 @@
-import * as cache from "../src/cache";
 import * as core from "@actions/core";
 
+import * as cache from "../src/cache";
 import { Events, Inputs, RefKey } from "../src/constants";
 import run from "../src/saveImpl";
 import { StateProvider } from "../src/stateProvider";
