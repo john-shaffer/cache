@@ -1,6 +1,6 @@
-import * as cache from "@actions/cache";
 import * as core from "@actions/core";
 
+import * as cache from "./cache";
 import { Events, Inputs, Outputs, State } from "./constants";
 import { IStateProvider } from "./stateProvider";
 import * as utils from "./utils/actionUtils";
