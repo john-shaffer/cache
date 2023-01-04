@@ -47,9 +47,14 @@ async function execTar(
     cwd?: string
 ): Promise<void> {
     try {
-        await exec(`"${await getTarPath(args, compressionMethod)}"`, args, {
-            cwd
-        });
+        // https://github.com/ethanis/cache/commit/7527073910621fae79488a74cee19f2e1c43b2af
+        await exec(
+            `sudo "${await getTarPath(args, compressionMethod)}"`,
+            args,
+            {
+                cwd
+            }
+        );
     } catch (error) {
         throw new Error(`Tar failed with error: ${error?.message}`);
     }

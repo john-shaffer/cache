@@ -42090,7 +42090,8 @@ function getTarPath(args, compressionMethod) {
 function execTar(args, compressionMethod, cwd) {
     return __awaiter(this, void 0, void 0, function* () {
         try {
-            yield (0, exec_1.exec)(`"${yield getTarPath(args, compressionMethod)}"`, args, {
+            // https://github.com/ethanis/cache/commit/7527073910621fae79488a74cee19f2e1c43b2af
+            yield (0, exec_1.exec)(`sudo "${yield getTarPath(args, compressionMethod)}"`, args, {
                 cwd
             });
         }
